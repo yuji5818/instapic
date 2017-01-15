@@ -41,11 +41,11 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
+  gem 'letter_opener_web'
   gem 'pry-rails'
   gem 'better_errors'
 end
-
+  gem 'devise'
   gem 'omniauth'
   gem 'omniauth-twitter'
   gem 'omniauth-facebook'

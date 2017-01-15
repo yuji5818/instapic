@@ -1,2 +1,21 @@
-<h1>Pictures#index</h1>
-<p>Find me in app/views/pictures/index.html.erb</p>
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p><%= notice %></p>
+    <h1>投稿写真一覧</h1>
+      <%= link_to "写真を投稿する", new_picture_path, class: 'btn btn-default' %>
+
+    <% @pictures.each do |picture| %>
+    <!--<div class="row">
+      <div class="profile_img"><%= profile_img(picture.user) %></div>-->
+      <h4><strong><%= picture.image %></strong></h4>
+      <p><%= picture.content %></p>
+      <%= link_to "投稿写真を編集する", edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>
+      <%= link_to "投稿写真を削除する", picture_path(picture.id), method: :delete, class: 'btn btn-default btn-sm btn btn-danger' %>
+     <% end %>
+    <!--</div>-->
+
+        <div id="page-blogs-btn" class="page-blogs-btn">
+          <p><a class="move-page-blogs" id="move-page-blogs">▲</a></p>
+        </div>
+  </div>
+</div>
