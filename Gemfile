@@ -58,3 +58,4 @@ end
   gem 'rails_admin'
   gem 'cancan'
   gem 'twitter-bootstrap-rails'
+  gem 'rails_12factor', group: :production
