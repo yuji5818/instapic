@@ -44,6 +44,9 @@ group :development, :test do
   gem 'letter_opener_web'
   gem 'pry-rails'
   gem 'better_errors'
+  gem 'pry-doc'
+  gem 'pry-byebug'
+  gem 'dotenv-rails'
 end
   gem 'devise'
   gem 'omniauth'
@@ -52,3 +55,6 @@ end
 
   gem 'carrierwave'
   gem 'rmagick'
+  gem 'rails_admin'
+  gem 'cancan'
+  gem 'twitter-bootstrap-rails'

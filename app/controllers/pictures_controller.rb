@@ -1,5 +1,6 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!
 
   def index
     @pictures = Picture.all
@@ -10,7 +11,14 @@ class PicturesController < ApplicationController
   end
 
   def create
-    @picture = Picture.create(picture_params)
+    @picture = Picture.create(pictures_params)
+    @picture.user_id = current_user.id
+    if @picture.save
+      redirect_to pictures_path,  notice: "写真を投稿しました！"
+    NoticeMailer.sendmail_picture(@picture).deliver
+    else
+      render 'new'
+    end
   end
 
   def edit
@@ -20,9 +28,9 @@ class PicturesController < ApplicationController
 
   def update
     @picture = Picture.find(params[:id])
-    @picture.update(picture_params)
+    @picture.update(pictures_params)
     if @picture.save
-      redirect_to pictures_path,  notice: "写真を更新しました！"
+      redirect_to pictures_path,　notice: "写真を更新しました！"
     else
       render 'edit'
     end
