@@ -39,12 +39,12 @@
 
     <% end %>
 
-  <div class="field">
-    <dic class="profileimg">
-      <%= profile_img(@user) if profile_img(@user) %>
-      <%= f.file_field :avatar %>
-      <%= f.hidden_field :avatar_cache %>
-  </div>
+      <div class="field">
+        <dic class="profileimg">
+        <%= profile_img(@user) if profile_img(@user) %>
+        <%= f.file_field :avatar %>
+        <%= f.hidden_field :avatar_cache %>
+      </div>
 
 
 

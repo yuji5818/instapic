@@ -202,7 +202,7 @@ sup {
  * Remove the border on images inside links in IE 10-.
  */
 
-img {
+/*img {
   border-style: none;
 }
 
@@ -420,9 +420,24 @@ textarea {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
+.flash {
+  color: black;
+  padding-top: 100px;
+  padding-left: 300px;
+  font-size: 30px;
+}
+.profileimg{
+  width: 50px;
+  height: 50px;
+}
 
-
-
-.flash{
-  margin-left: 50px;
+.top_icon{
+  display: block;
+  margin-left: 300px;
+  width: 500px;
+  height: 500px;
+}
+.profileimg{
+  width: 50px;
+  height: 50px;
 }

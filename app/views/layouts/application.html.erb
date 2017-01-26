@@ -7,27 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class=link rel="stylesheets" href="top.scss">
   <header>
-    <div class="nav">
-       <div class="left li">
-         <li><%= link_to 'ホーム', root_path %></li>
-         <li><%= link_to 'お知らせ', "#" %></li>
-       </div>
-    <form name="searchform4" id="searchform4" method="get" action="#">   
-       <div class="right li">
-        <li><%= link_to '投稿一覧', pictures_path %></li>
-      <% if user_signed_in? %>
-        <li><%= link_to 'マイページ', edit_user_registration_path %></li>
-        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-      <% else %>
-        <li><%= link_to 'ログイン', new_user_session_path  %></li>
-        <li><%= link_to '新規会員登録', new_user_registration_path %></li>
-      <% end %>
-      </div>
+    <div class="left li">
+      <li><%= link_to 'ホーム', root_path %></li>
+      <li><%= link_to 'お知らせ', "#" %></li>
+    </div>
+    <div class="right li">
+      <li><%= link_to '投稿一覧', pictures_path %></li>
+    <% if user_signed_in? %>
+      <li><%= link_to 'マイページ', edit_user_registration_path %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+    <% else %>
+      <li><%= link_to 'ログイン', new_user_session_path  %></li>
+      <li><%= link_to '新規会員登録', new_user_registration_path %></li>
+    <% end %>
     </div>
   </header>
-</div>
 <section class="post">
 
 <%= yield %>
