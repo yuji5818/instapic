@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
-<div class="imagedetail">
-  <strong>◆投稿写真</strong>
-  <%= image_tag @picture.image %>
-</div>
-<div class="postdetail">
-  <strong>◆投稿内容:</strong>
-  <%= @picture.content %>
-</div>
+  <div class="imagedetail">
+    <strong>◆投稿写真</strong>
+    <%= image_tag @picture.image %>
+  </div>
+  <div class="postdetail">
+    <strong>◆投稿内容:</strong>
+    <%= @picture.content %>
 
-<%= link_to '一覧へ戻る', pictures_path %>
+    <br>
+    <%= link_to '一覧へ戻る', pictures_path %>
+  </div>

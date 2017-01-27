@@ -421,23 +421,58 @@ textarea {
   font: inherit; /* 2 */
 }
 
-img{
+/*img{
   width: 200px;
   height: 200px;
 }
+*/
 .flash {
   color: black;
   padding-top: 100px;
   padding-left: 300px;
   font-size: 30px;
 }
-.top_icon{
+.topicon {
+  img {
   display: block;
   margin-left: 300px;
   width: 500px;
   height: 500px;
+  }
 }
-.profileimg{
-  width: 50px;
-  height: 50px;
+.profileimg {
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+.postimg {
+  img{
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.imagedetail{
+  padding-top: 50px;
+  padding-left: 100px;
+  img {
+  width: 400px;
+  height: 400px;
+  }
+}
+.postdetail{
+  padding-left: 100px;
+  padding-top: 100px;
+}
+.wrapper{
+  margin-bottom: 74px;
+  padding: 20px 20px 20px 35px;
+}
+.btn btn-primary{
+  height: 30px;
+}
+
+.container{
+  padding-bottom: 50px;
 }
